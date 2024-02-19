@@ -1,2 +1,48 @@
 ---
 # tasks file for user_adminstration
+- name: Create groups
+  tags: addgroup
+  group:
+    name: "{{ item.name }}"
+    state: present
+  loop: "{{ groups_to_create }}"
+
+- name: Remove groups
+  tags: removegroup
+  group:
+    name: "{{ item.name }}"
+    state: absent
+  loop: "{{ groups_to_remove }}"
+
+- name: Create users
+  tags: adduser
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+    groups: "{{ item.groups }}"
+    state: present
+  loop: "{{ users_to_create }}"
+
+- name: Remove users
+  tags: removeuser
+  user:
+    name: "{{ item.name }}"
+    state: absent
+  loop: "{{ users_to_remove }}"
+
+- name: Add users to groups
+  tags: addusertogroup
+  user:
+    name: "{{ item.name }}"
+    groups: "{{ item.groups }}"
+    append: yes
+  loop: "{{ users_to_add_to_groups }}"
+
+- name: Remove users from groups
+  tags: removeuserfromgroup
+  user:
+    name: "{{ item.name }}"
+    groups: "{{ item.groups }}"
+    state: absent
+  loop: "{{ users_to_remove_from_groups }}"
+

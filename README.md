@@ -8,3 +8,4 @@
 	- tasks/: This directory contains YAML files defining the main tasks of the role. These tasks define the actions that the role should perform on the target hosts.
 	- vars/: This directory contains YAML files defining variables used by the role. Unlike default variables, these variables are not meant to be overridden by users and are typically used for internal role configuration.
 
+ansible-playbook playbook.yml -u client --ask-become-pass --tags addgroup

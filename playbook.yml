@@ -1,0 +1,7 @@
+---
+- name: User Administration Playbook
+  hosts: servers
+  become: yes
+  roles:
+    - user_adminstration
+
