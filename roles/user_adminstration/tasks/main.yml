@@ -46,7 +46,7 @@
   user:
     name: "{{ item.name }}"
     groups: "{{ item.groups }}"
-    apppend: no
+    append: no
   loop: "{{ users_to_remove_from_groups }}"
 
 - name: Create users after

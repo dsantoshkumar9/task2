@@ -12,11 +12,17 @@ ansible-playbook playbook.yml -u client --ask-become-pass --tags addgroup
 
 ### order for execution of tags for proper adminstration
 Tags
-	- adduser
 	- addgroup
+	- adduser
 	- adduserafter
 	- addusertogroup
 	- removeuserfromgroup
 	- removegroup
 	- removeuser
+
+#### error faced
+- errors
+	- removeuserfromgroup is not working as desired
+	- unable to login into user4,5,6
+	- adduser worked before adding groups, but not now; throwing error of group not existing
 
