@@ -46,3 +46,11 @@
     state: absent
   loop: "{{ users_to_remove_from_groups }}"
 
+- name: Create users after
+  tags: adduserafter
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+    groups: "{{ item.groups }}"
+    state: present
+  loop: "{{ users_to_create_after }}"
