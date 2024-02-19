@@ -26,27 +26,28 @@ groups_to_create:
   - name: group3
   - name: group4
   - name: group5
+  - name: group6
 groups_to_remove:
   - name: group1
   - name: group2
   - name: group3
 users_to_add_to_groups:
-  - name: user7
-    groups: ['group2']
-    password: "$6$4W5t3Dsm1HnaGNgl$x4DVHHMd2bN4as4/N6/C1SL0U3ECW6jO2Z92m6QUrfHQC/dSQJI2yRR.jmLDAaBxDC2xFHTkfqwJP.wQ6bVs90"
+  - name: user4
+    groups: ['group4']
+  - name: user5
+    groups: ['group5']
+  - name: user6
+    groups: ['group6']
 users_to_remove_from_groups:
   - name: user2
     groups: ['group2']
 users_to_create_after:
   - name: user4
     uid: 1004
-    groups: ['group3']
     password: "$6$4W5t3Dsm1HnaGNgl$x4DVHHMd2bN4as4/N6/C1SL0U3ECW6jO2Z92m6QUrfHQC/dSQJI2yRR.jmLDAaBxDC2xFHTkfqwJP.wQ6bVs90"
   - name: user5
     uid: 1005
-    groups: ['group4']
     password: "$6$4W5t3Dsm1HnaGNgl$x4DVHHMd2bN4as4/N6/C1SL0U3ECW6jO2Z92m6QUrfHQC/dSQJI2yRR.jmLDAaBxDC2xFHTkfqwJP.wQ6bVs90"
   - name: user6
     uid: 1006
-    groups: ['group5']
     password: "$6$4W5t3Dsm1HnaGNgl$x4DVHHMd2bN4as4/N6/C1SL0U3ECW6jO2Z92m6QUrfHQC/dSQJI2yRR.jmLDAaBxDC2xFHTkfqwJP.wQ6bVs90"

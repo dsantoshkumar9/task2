@@ -9,3 +9,14 @@
 	- vars/: This directory contains YAML files defining variables used by the role. Unlike default variables, these variables are not meant to be overridden by users and are typically used for internal role configuration.
 
 ansible-playbook playbook.yml -u client --ask-become-pass --tags addgroup
+
+### order for execution of tags for proper adminstration
+Tags
+	- adduser
+	- addgroup
+	- adduserafter
+	- addusertogroup
+	- removeuserfromgroup
+	- removegroup
+	- removeuser
+

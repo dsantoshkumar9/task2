@@ -54,6 +54,5 @@
   user:
     name: "{{ item.name }}"
     uid: "{{ item.uid }}"
-    groups: "{{ item.groups }}"
     state: present
   loop: "{{ users_to_create_after }}"
