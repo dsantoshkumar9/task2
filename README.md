@@ -22,8 +22,8 @@ Tags
 
 #### error faced
 - errors
-	- removeuserfromgroup is not working as desired
-	- unable to login into user4,5,6
-	- adduser worked before adding groups, but not now; throwing error of group not existing
-
-getent group
+	- [x] removeuserfromgroup is not working as desired
+	- [x] unable to login into user4,5,6
+	- [x] adduser worked before adding groups, but not now; throwing error of group not existing getent group
+		- groups should be created before
+	- [ ] delete the user directories from /home dir , (these directories are not deleted even after the user is deleted )

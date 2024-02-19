@@ -55,6 +55,7 @@
   user:
     name: "{{ item.name }}"
     uid: "{{ item.uid }}"
+    password: "{{ item.password }}"
     state: present
     shell: /bin/bash
   loop: "{{ users_to_create_after }}"

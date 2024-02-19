@@ -31,6 +31,9 @@ groups_to_remove:
   - name: group1
   - name: group2
   - name: group3
+  - name: group4
+  - name: group5
+  - name: group6
 users_to_add_to_groups:
   - name: user4
     groups: ['group4']
