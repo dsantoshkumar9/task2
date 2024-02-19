@@ -40,7 +40,7 @@ users_to_add_to_groups:
     groups: ['group6']
 users_to_remove_from_groups:
   - name: user2
-    groups: ['group2']
+    groups: []
 users_to_create_after:
   - name: user4
     uid: 1004
