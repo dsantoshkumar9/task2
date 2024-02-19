@@ -39,6 +39,7 @@
     name: "{{ item.name }}"
     groups: "{{ item.groups }}"
     append: yes
+    state: present
   loop: "{{ users_to_add_to_groups }}"
 
 - name: Remove users from groups
@@ -47,6 +48,8 @@
     name: "{{ item.name }}"
     groups: "{{ item.groups }}"
     append: no
+    state: present
+   #command: gpasswd -d "{{ item.name }}" "{{ item.groups }}"
   loop: "{{ users_to_remove_from_groups }}"
 
 - name: Create users after

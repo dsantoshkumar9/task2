@@ -26,3 +26,4 @@ Tags
 	- unable to login into user4,5,6
 	- adduser worked before adding groups, but not now; throwing error of group not existing
 
+getent group
