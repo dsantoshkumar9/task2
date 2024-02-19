@@ -22,6 +22,8 @@
     groups: "{{ item.groups }}"
     password: "{{ item.password }}"
     state: present
+    shell: /bin/bash
+    append: yes
   loop: "{{ users_to_create }}"
 
 - name: Remove users
@@ -44,7 +46,7 @@
   user:
     name: "{{ item.name }}"
     groups: "{{ item.groups }}"
-    state: absent
+    apppend: no
   loop: "{{ users_to_remove_from_groups }}"
 
 - name: Create users after
