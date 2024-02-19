@@ -20,6 +20,7 @@
     name: "{{ item.name }}"
     uid: "{{ item.uid }}"
     groups: "{{ item.groups }}"
+    password: "{{ item.password }}"
     state: present
   loop: "{{ users_to_create }}"
 
